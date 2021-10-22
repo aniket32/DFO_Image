@@ -42,3 +42,5 @@ for i in range(50):
 	plt.pause(0.0001) # PAUSE BEFORE THE NEXT ITERATION IN BETWEEN
 	plt.clf()	# CLEAR THE CANVAS 
 
+print("Hello")
+print("Hi")
