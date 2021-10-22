@@ -28,7 +28,24 @@ print('Image size:', imgW, 'x', imgH)
 # print(img[100][360]) # PRINT SAMPLE VALUE AT ROW 100, COLUMN 360
 
 # WHITE PIXEL VALUE = 1.0 (PNG) or 255
-# BLACK PIXEL VALUE = 0.0 (PNG) or 0  
+# BLACK PIXEL VALUE = 0.0 (PNG) or 0
+
+N = 50 # Population Size
+D = 1 # The Dimensionality
+maxIteration = 1000
+lowerB = 0
+upperB = 255
+
+# Initialising Phase
+X = np.empty([N,D])  # Empty flies array of size : (N,D)
+fitness = [None] * N # Empty fitness array size
+
+# Initialising the flies within bounds
+for i in range(N):
+	for d in range(D):
+		X[i,d] = np.random.uniform(lowerB[d], upperB[d])
+
+		
 
 plt.ion()
 for i in range(50):
@@ -42,5 +59,3 @@ for i in range(50):
 	plt.pause(0.0001) # PAUSE BEFORE THE NEXT ITERATION IN BETWEEN
 	plt.clf()	# CLEAR THE CANVAS 
 
-print("Hello")
-print("Hi")
